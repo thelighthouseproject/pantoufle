@@ -1,0 +1,51 @@
+/* =Screen
+*/
+@media screen {
+
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  html
+  {
+    height: 100%; width: 100%;
+    margin: 0;
+  }
+
+  body
+  {
+    margin: 0;
+    min-width: @sheet-width + 3 * @interface-padding;
+    background-color: rgb(96,96,96);
+    .clearfix();
+  }
+
+} // @media screen
+
+
+/* =Print
+*/
+@media print {
+
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  @page
+  {
+    size: portrait; // DOESN’T WORK
+    margin: 0mm;
+  }
+
+  html, body {
+    background-color: transparent;
+    margin: 0;
+  }
+
+  // Convert cm to view port unit.
+  .page {
+    width: 100vw;
+    height: 100vh;
+  }
+
+} // @media print

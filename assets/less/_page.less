@@ -1,0 +1,21 @@
+.page
+{
+  .make-page();
+  .make-page-margin();
+}
+
+.page--cover
+{
+  .make-page(
+    @cover-margin-top,
+    @cover-margin-outside,
+    @cover-margin-bottom,
+    @cover-margin-inside
+  );
+  .make-page-margin(
+    @cover-margin-top,
+    @cover-margin-outside,
+    @cover-margin-bottom,
+    @cover-margin-inside
+  );
+}

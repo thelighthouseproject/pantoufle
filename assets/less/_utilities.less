@@ -1,0 +1,43 @@
+.hide
+{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.clearfix
+{
+  .clearfix();
+}
+
+@media screen {
+
+  body {
+    transform-origin: top left;
+    transform: scale(@interface-scale);
+    transition: background-color @interface-transition-speed;
+
+    .page::before {
+      transition: opacity @interface-transition-speed;
+    }
+
+    // Preview mode
+    &.preview {
+
+      background-color: rgb(186, 186, 186);
+
+      .page::before {
+        opacity: 0;
+      }
+
+    }
+
+  }
+
+
+}
