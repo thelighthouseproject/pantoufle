@@ -1,7 +1,7 @@
 {
   "name": "Pantoufle",
   "version": "0.3.0",
-  "description": "testest",
+  "description": "Get a preview of a printable webpage",
   "repository": {
     "type": "git",
     "url": "git@github.com:julien-gargot/pantoufle.git"
@@ -20,5 +20,5 @@
     "gulp-uglify": "^3.0.0",
     "jshint": "^2.9.5",
     "lru-cache": "^4.1.1"
-  },
+  }
 }
