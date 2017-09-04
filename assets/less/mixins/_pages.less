@@ -11,7 +11,12 @@
   @inner-width: calc(100% ~"-" @margin-outside + @margin-inside);
   @inner-height: calc(100% ~"-" @margin-top + @margin-bottom);
   @inner-width-mm: @width - @margin-outside - @margin-inside;
-  @inner-height-mm: @height - @margin-top - @margin-bottom;
+  & when (@height = auto) {
+    @inner-height-mm: auto;
+  }
+  & when not (@height = auto) {
+    @inner-height-mm: @height - @margin-top - @margin-bottom;
+  }
 
   position: relative;
   float:left;
@@ -109,7 +114,12 @@
   @inner-width: calc(100% ~"-" @margin-outside + @margin-inside);
   @inner-height: calc(100% ~"-" @margin-top + @margin-bottom);
   @inner-width-mm: @width - @margin-outside - @margin-inside;
-  @inner-height-mm: @height - @margin-top - @margin-bottom;
+  & when (@height = auto) {
+    @inner-height-mm: auto;
+  }
+  & when not (@height = auto) {
+    @inner-height-mm: @height - @margin-top - @margin-bottom;
+  }
 
   .content {
     margin-top: @margin-top;
