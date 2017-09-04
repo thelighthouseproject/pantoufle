@@ -1,0 +1,3 @@
+[submodule "content"]
+	path = content
+	url = gogs@g-u-i.me:julien/lighthouse-content.git
